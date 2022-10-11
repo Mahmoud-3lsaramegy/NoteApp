@@ -1,0 +1,33 @@
+"UserName"
+
+Icons.person
+
+
+"Password"
+
+
+Icon(Icons.key)
+
+
+
+Color(0xffEFBF00)
+
+
+200,50
+
+
+Color(0xff72716D)
+
+75,75
+
+Navigator.pushNamed(context, "login");
+
+
+Center(
+                        child: Container(
+                          child: Icon(
+                            Icons.arrow_back,
+                            size: 35,
+                          ),
+                        ),
+                      ),

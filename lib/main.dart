@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:noteapp/User_Sign_page/sign_in_page.dart';
+
+import 'User_Sign_page/sign_in_page.dart';
+
+import 'User_Sign_page/sign_up_page.dart';
 
 void main() {
   runApp(const Notemain());
@@ -17,6 +20,10 @@ class _NotemainState extends State<Notemain> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Loginpage(),
+      routes: {
+        "login": (context) => Loginpage(),
+        "singUp": (context) => SingUp(),
+      },
     );
   }
 }

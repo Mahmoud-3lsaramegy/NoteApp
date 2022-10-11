@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import 'package:noteapp/GUI-Lib/gui-main.dart';
+
 class Loginpage extends StatefulWidget {
   const Loginpage({Key? key}) : super(key: key);
 
@@ -13,22 +15,12 @@ class _LoginpageState extends State<Loginpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-          child: Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           // logo Icon
-          Center(
-            child: Container(
-                width: 148,
-                height: 148,
-                child: Image.asset(
-                  "images/logo0.png",
-                  filterQuality: FilterQuality.none,
-                  fit: BoxFit.fill,
-                )),
-          ),
+          LOgoIcon(148, 148, "images/logo0.png"),
           /*logo End 
           size =148.0
           center..
@@ -38,38 +30,12 @@ class _LoginpageState extends State<Loginpage> {
           Container(
             padding: EdgeInsets.all(8.0),
             child: Column(children: [
-              Form(
-                child: TextFormField(
-                  maxLines: 1,
-                  style: TextStyle(color: Colors.black),
-                  decoration: InputDecoration(
-                    hintText: "UserName",
-                    prefixIcon: Icon(
-                      Icons.person,
-                    ),
-                    border:
-                        OutlineInputBorder(borderSide: BorderSide(width: 1.0)),
-                  ),
-                ),
-              ),
+              Donia_Input("UserName", Icon(Icons.person), false),
               SizedBox(
                 width: double.infinity,
                 height: 20,
               ),
-              Form(
-                child: TextFormField(
-                  maxLines: 1,
-                  style: TextStyle(color: Colors.black),
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.key),
-                    hintText: "Password",
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(width: 1.0),
-                    ),
-                  ),
-                ),
-              ),
+              Donia_Input("Password", Icon(Icons.key), true)
             ]),
           ),
           //END Text Input
@@ -79,49 +45,28 @@ class _LoginpageState extends State<Loginpage> {
                */
 /////////////////////////////////_____________________////////////////////////////////////////////
 // Buttons Star
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                width: 100,
-                height: 40,
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(27)),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text("Sign In"),
-                  style: ButtonStyle(
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(27),
-                    )),
-                    backgroundColor:
-                        MaterialStateProperty.all(Color(0xffEFBF00)),
-                  ),
+          Container(
+            margin: EdgeInsets.all(10),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Button3lsaramegy_text(
+                    Color(0xffEFBF00), 175, 50, Text("Sing In"), () {}, 27),
+                SizedBox(
+                  width: 10,
+                  height: 1,
                 ),
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Container(
-                width: 100,
-                height: 40,
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(27)),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text("Sign up"),
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(Color(0xff72716D)),
-                  ),
-                ),
-              ),
-            ],
+                //0xff72716D
+                Button3lsaramegy_text(
+                    Color(0xff72716D), 175, 50, Text("Sing Up"), (() {
+                  Navigator.of(context).pushNamed("singUp");
+                }), 27),
+              ],
+            ),
           ),
         ],
-      )),
+      ),
     );
   }
 }
