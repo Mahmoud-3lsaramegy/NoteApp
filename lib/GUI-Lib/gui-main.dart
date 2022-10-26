@@ -81,16 +81,30 @@ class Donia_Input extends StatelessWidget {
 // list Nots
 
 class ListNote extends StatelessWidget {
-  var titel, image, icon;
+  var titel, image;
+  //Icon icon;
 
-  ListNote(this.titel, this.image, this.icon);
+  ListNote(this.titel, this.image);
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: titel,
-      leading: Image.asset(image),
-      trailing: icon,
-    );
+    return Container(
+        padding: EdgeInsets.all(10),
+        width: double.infinity,
+        child: ListTile(
+          title: Text("Title"),
+          subtitle: Text("$titel"),
+          leading: Image.asset(
+            "$image",
+            fit: BoxFit.fill,
+          ),
+          trailing: IconButton(
+            onPressed: (() {}),
+            icon: Icon(
+              Icons.edit,
+              color: Color(0xffEFBF00),
+            ),
+          ),
+        ));
   }
 }

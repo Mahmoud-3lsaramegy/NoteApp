@@ -12,8 +12,8 @@ class SingUp extends StatelessWidget {
         margin: EdgeInsets.only(left: 10, right: 10),
         child: Center(
           child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 LOgoIcon(148, 148, "images/logo0.png"),
                 Donia_Input("UserName", Icon(Icons.person), false),
@@ -23,7 +23,6 @@ class SingUp extends StatelessWidget {
                 Donia_Input("FullName", Icon(Icons.person_add), false),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Button3lsaramegy_text(
                         Color(0xffEFBF00), 200, 50, Text("SingUp"), () {}, 27),
