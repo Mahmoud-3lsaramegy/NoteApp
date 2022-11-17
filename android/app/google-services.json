@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "943897795552",
+    "project_id": "elsaramegynoter",
+    "storage_bucket": "elsaramegynoter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943897795552:android:ecd32a2abdd6a453472985",
+        "android_client_info": {
+          "package_name": "com.example.noteapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943897795552-nlmkcvjdktdckpsk64dret9bitr7hqfa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.noteapp",
+            "certificate_hash": "a542702fcbd5463f60fd3bb7dd6fdd699d252110"
+          }
+        },
+        {
+          "client_id": "943897795552-sj2ovs6cjenq7cddkorh0er9qo8k6qhq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT-ISLnwrhkfKnEAbW-2BcAqVrkrQpX7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "943897795552-sj2ovs6cjenq7cddkorh0er9qo8k6qhq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -30,7 +30,7 @@ class _NoteHomeState extends State<NoteHome> {
       appBar: AppBar(
         title: Center(
             child: Text(
-          "Notes Paage",
+          "Notes Page",
           style: TextStyle(fontSize: 32, fontWeight: FontWeight.w100),
         )),
       ),
@@ -52,7 +52,9 @@ class _NoteHomeState extends State<NoteHome> {
             margin: EdgeInsets.all(20),
             alignment: Alignment.bottomRight,
             child: FloatingActionButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, "addNote");
+              },
               child: Icon(Icons.add),
               backgroundColor: Color(0xffEFBF00),
               focusColor: Color(0xff72716D),
